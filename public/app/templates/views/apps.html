@@ -1,0 +1,11 @@
+<h2>Apps</h2>
+<div class="apps">
+  <a class="link" ui-sref="apps-create">Create new app</a>
+  <div class="apps__item" ng-repeat="app in apps">
+    <div class="apps_buttons buttons" ng-click="edit(app)">
+      <button class="button">Button</button>
+    </div>
+    {{app.title}}
+    <span>{{app.description}}</span>
+  </div>
+</div>

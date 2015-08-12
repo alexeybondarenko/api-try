@@ -1,0 +1,49 @@
+
+$white: white
+$border-color: #666
+$border-color-light: #999
+
+.wrapper
+  color: black
+
+.form
+  padding: 10px 14px
+  .form__group
+    margin-top: 10px
+    display: inline-block
+    width: 100%
+
+.input
+  padding: 10px 14px
+  display: inline-block
+  width: 100%
+  box-sizing: border-box
+  margin-top: 10px
+
+.button
+  display: inline-block
+  width: 100%
+  apperance: none
+  -webkit-apperance: none
+  border-radius: 0
+  border: 0
+
+  background: $white
+  padding: 10px 14px
+  border: 1px solid $border-color
+  &:hover, &:active
+    background: rgba(0,0,0,.1)
+    border-color: $border-color-light
+
+.info
+  padding: 10px 14px
+.apps
+  .apps__item
+    min-height: 36px
+    padding: 10px 14px
+    border-top: 1px solid $border-color-light
+    border-bottom: 1px solid $border-color
+    span
+      font-weight: 200
+    .buttons
+      float: right

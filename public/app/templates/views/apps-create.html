@@ -1,0 +1,17 @@
+<div class="info">
+  <h2>Create new app</h2>
+  <!--<p>Select .ipa or .apk file for upload</p>-->
+</div>
+<form class="form" ng-submit="submit(form)" name="form">
+  <label class="form__group">
+    Title
+    <input class="input" required type="text" name="title" ng-model="app.title"/>
+  </label>
+  <label class="form__group">
+    Description
+    <input class="input" required type="text" name="description" ng-model="app.description"/>
+  </label>
+  <div class="form__group">
+    <button class="button" type="submit">Submit</button>
+  </div>
+</form>

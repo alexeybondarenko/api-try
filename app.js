@@ -2,6 +2,8 @@
 var Hapi = require ('hapi');
 var HapiBasicAuth = require('hapi-auth-basic');
 
+var Path = require('path');
+
 // logging
 var Good = require ('good');
 var GoodConsole = require('good-console');
@@ -10,6 +12,8 @@ var GoodFile = require('good-file');
 var BasicAuth = require('./server/basic-auth');
 var Routes = require('./server/routes');
 var CONFIG  = require('./server/config');
+var Db  = require('./server/db');
+
 
 var serverConfig = {
     host: CONFIG.server.host || '0.0.0.0',
@@ -20,13 +24,15 @@ var serverConfig = {
 var server = new Hapi.Server();
 server.connection(serverConfig);
 
-// routes
+// /
 server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, reply) {
-        reply('Hello, world!');
+  method: 'GET',
+  path: '/{param*}',
+  handler: {
+    directory: {
+      path: Path.join(__dirname, 'public/app')
     }
+  }
 });
 
 // server plugins
@@ -55,7 +61,7 @@ server.register(plugins, function (err) {
     server.auth.strategy('simple','basic', {validateFunc: BasicAuth.validate});
     // adding routes to server
     server.route(Routes.endpoints);
-    
+
     server.start(function () {
         server.log('info', 'Server running at: ' + server.info.uri);
     });

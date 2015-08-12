@@ -9,7 +9,7 @@ var Bcrypt = require('Bcrypt');
 var users = {
     abondarenko: {
         username: 'abondarenko',
-        password: '$2a$04$Z2mko8cnGp2o8EPUfvgpweB1LPUMd32WWi5AF7wUpVcgLhMoJT4Mi',
+        password: '$2a$04$dGthkU0Y9BYirqHcaOvGpujxA9LgItZLscYrLOcj8bPbZ.bvoMppe', // qwerty
         name: 'Oleksii Bondarenko',
         id: '1'
     }

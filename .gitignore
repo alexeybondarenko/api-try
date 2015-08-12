@@ -4,3 +4,7 @@ node_modules
 # server temp
 
 logs
+
+# file uploads
+
+uploads

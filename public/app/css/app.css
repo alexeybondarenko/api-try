@@ -1,0 +1,43 @@
+.wrapper {
+  color: black; }
+
+.form {
+  padding: 10px 14px; }
+  .form .form__group {
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%; }
+
+.input {
+  padding: 10px 14px;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px; }
+
+.button {
+  display: inline-block;
+  width: 100%;
+  apperance: none;
+  -webkit-apperance: none;
+  border-radius: 0;
+  border: 0;
+  background: white;
+  padding: 10px 14px;
+  border: 1px solid #666666; }
+  .button:hover, .button:active {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: #999999; }
+
+.info {
+  padding: 10px 14px; }
+
+.apps .apps__item {
+  min-height: 36px;
+  padding: 10px 14px;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #666666; }
+  .apps .apps__item span {
+    font-weight: 200; }
+  .apps .apps__item .buttons {
+    float: right; }
